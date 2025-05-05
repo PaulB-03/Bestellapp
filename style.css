@@ -13,3 +13,8 @@
     display: flex;
     flex-direction: row;
 }
+
+.orange {
+    color: #ff8000;
+    font-weight: bold;
+}

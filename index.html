@@ -1,25 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Bestellapp</title>
-    <link rel="icon" href="./assets/icons/favicon.ico" type="image/x-icon">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="./styles/standart.css">
-    <link rel="stylesheet" href="./styles/basket.css">
-    <link rel="stylesheet" href="./styles/menu.css">
-
-</head>
-<body>
+    <link rel="icon" href="./assets/icons/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="./styles/standart.css" />
+    <link rel="stylesheet" href="./styles/basket.css" />
+    <link rel="stylesheet" href="./styles/menu.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
     <div class="page-wrapper">
-        <div class="header">
-            <img src="./assets/icons/Logo.png" alt="">
+      <div class="header">
+        <img src="./assets/icons/Logo.png" alt="" />
+      </div>
+      <div class="main-section">
+        <div class="menu">
+          <img src="./assets/img/pizza-head.jpg" alt="" />
+          <div class="menu-content">
+            <h2>Pizza Pallace</h2>
+            <p class="orange">Bewertung: 4,2 von 5 Sternen</p>
+            <div class="categories">
+              <button class="category-button" id="pizza-button">Pizza</button>
+              <button class="category-button" id="salat-button">Salat</button>
+              <button class="category-button" id="snacks-button">Snacks</button>
+              <button class="category-button" id="getraenke-button">Getränke</button>
+            </div>
+          </div>
         </div>
-        <div class="main-section">
-            <div class="menu">men</div>
-            <div class="basket">bas</div>
+        <div class="basket">
+          <h2>Warenkorb</h2>
+          <div class="devider"></div>
+          <div class="basket-content"></div>
+          <div class="devider"></div>
+          <div class="basket-total"></div>
         </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>
