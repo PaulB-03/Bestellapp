@@ -19,7 +19,7 @@
     <script src="./scripts/basket.js"></script>
     <script src="./scripts/script.js"></script>
   </head>
-  <body onload="init()">
+  <body onload="init(); initBasket()">
     <div class="page-wrapper">
       <div class="header">
         <img src="./assets/icons/Logo.png" alt="" />
@@ -71,9 +71,13 @@
         <div class="basket">
           <h2>Warenkorb</h2>
           <div class="devider"></div>
-          <div class="basket-content"></div>
+          <div id="basket-content"></div>
           <div class="devider"></div>
-          <div class="basket-total"></div>
+          <div class="checkDelivery">
+            <input type="checkbox" id="delivery" name="delivery" value="delivery" />
+            <label for="delivery">Lieferung</label>
+          </div>
+          <div class="basket-total" id="basket-total"></div>
         </div>
       </div>
     </div>

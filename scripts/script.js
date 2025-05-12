@@ -17,7 +17,10 @@ function loadPizzaSection() {
       pizza.description
     }</p><p id="price-tag">Preis: ${pizza.price.toFixed(
       2
-    )} €</p></div><div class="right-side"><button>Zum Warenkorb hinzufügen</button></div>`;
+    )} €</p></div><div class="right-side"><button onclick='addToBasket(${JSON.stringify(
+      pizza
+    )})'>Zum Warenkorb hinzufügen</button>
+</div>`;
     pizzaSection.appendChild(pizzaDiv);
   }
 }
@@ -34,7 +37,9 @@ function loadSaladSection() {
       salad.description
     }</p><p id="price-tag">Preis: ${salad.price.toFixed(
       2
-    )} €</p></div><div class="right-side"><button>Zum Warenkorb hinzufügen</button></div>`;
+    )} €</p></div><div class="right-side"><button onclick='addToBasket(${JSON.stringify(
+      salad
+    )})'>Zum Warenkorb hinzufügen</button></div>`;
     saladSection.appendChild(saladDiv);
   }
 }
@@ -51,7 +56,9 @@ function loadSnackSection() {
       snack.description
     }</p><p id="price-tag">Preis: ${snack.price.toFixed(
       2
-    )} €</p></div><div class="right-side"><button>Zum Warenkorb hinzufügen</button></div>`;
+    )} €</p></div><div class="right-side"><button onclick='addToBasket(${JSON.stringify(
+      snack
+    )})'>Zum Warenkorb hinzufügen</button></div>`;
     snackSection.appendChild(snackDiv);
   }
 }
@@ -68,7 +75,9 @@ function loadDrinkSection() {
       drink.description
     }</p><p id="price-tag">Preis: ${drink.price.toFixed(
       2
-    )} €</p></div><div class="right-side"><button>Zum Warenkorb hinzufügen</button></div>`;
+    )} €</p></div><div class="right-side"><button onclick='addToBasket(${JSON.stringify(
+      drink
+    )})'>Zum Warenkorb hinzufügen</button></div>`;
     drinkSection.appendChild(drinkDiv);
   }
 }
