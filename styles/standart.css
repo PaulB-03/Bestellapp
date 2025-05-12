@@ -13,3 +13,12 @@ a {
 p {
     font-size: 16px;
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+  background-color: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #ff8000;
+  border-radius: 5px;
+}

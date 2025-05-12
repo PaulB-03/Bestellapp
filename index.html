@@ -15,8 +15,11 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
+    <script src="./scripts/db.js"></script>
+    <script src="./scripts/basket.js"></script>
+    <script src="./scripts/script.js"></script>
   </head>
-  <body>
+  <body onload="init()">
     <div class="page-wrapper">
       <div class="header">
         <img src="./assets/icons/Logo.png" alt="" />
@@ -28,10 +31,40 @@
             <h2>Pizza Pallace</h2>
             <p class="orange">Bewertung: 4,2 von 5 Sternen</p>
             <div class="categories">
-              <button class="category-button" id="pizza-button">Pizza</button>
-              <button class="category-button" id="salat-button">Salat</button>
-              <button class="category-button" id="snacks-button">Snacks</button>
-              <button class="category-button" id="getraenke-button">Getränke</button>
+              <a class="category-button" href="#pizzas">Pizza</a>
+              <a class="category-button" href="#salads">Salat</a>
+              <a class="category-button" href="#snacks">Snacks</a>
+              <a class="category-button" href="#drinks">Getränke</a>
+            </div>
+            <div class="menu-items">
+              <div id="pizzas">
+                <div class="section-head">
+                  <img src="./assets/img/pizzas.jpg" alt="">
+                  <h2>Pizza:</h2>
+                </div>
+                <div id="pizza-section"></div>
+              </div>
+              <div id="salads">
+                <div class="section-head">
+                  <img src="./assets/img/salads.jpg" alt="">
+                  <h2>Salat:</h2>
+                </div>
+                <div id="salad-section"></div>
+              </div>
+              <div id="snacks">
+                <div class="section-head">
+                  <img src="./assets/img/snacks.jpg" alt="">
+                  <h2>Snacks:</h2>
+                </div>
+                <div id="snack-section"></div>
+              </div>
+              <div id="drinks">
+                <div class="section-head">
+                  <img src="./assets/img/drinks.jpg" alt="">
+                  <h2>Getränke:</h2>
+                </div>
+                <div id="drink-section"></div>
+              </div>
             </div>
           </div>
         </div>

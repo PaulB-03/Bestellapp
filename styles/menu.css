@@ -24,6 +24,7 @@
     height: auto;
     margin-bottom: 20px;
     margin-top: 20px;
+    gap: 20px;
 }
 
 .category-button {
@@ -33,11 +34,87 @@
     background-color: #ff8000;
     color: white;
     border-radius: 5px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5), 0 0 5px rgba(0, 0, 0, 0.5);
     text-align: center;
     font-size: 18px;
     font-weight: bold;
 }
 .category-button:hover {
-    background-color: #e67e22;
+    background-color: #e78631;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7), 0 0 5px rgba(0, 0, 0, 0.7);
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
     cursor: pointer;
+}
+
+.section-head {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.section-head img {
+    width: 100%;
+    height: 200px;
+    margin: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+    object-fit: cover;
+}
+
+.section-head h2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-left: 40px;
+}
+
+.menu-item {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    margin-left: 40px;
+}
+
+.menu-item button {
+    padding: 10px;
+    background-color: #ff8000;
+    color: white;
+    border-radius: 5px;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.5), 0 0 5px rgba(0, 0, 0, 0.5);
+    font-size: 16px;
+    font-weight: bold;
+    margin-right: 20px;
+    border: none;
+}
+
+.menu-item button:hover {
+    background-color: #c46614;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.7), 0 0 5px rgba(0, 0, 0, 0.7);
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.menu-item h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.menu-item p {
+    margin-left: 20px;
+}
+
+#price-tag {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ff8000;
+    margin-left: 20px;
 }
