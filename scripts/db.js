@@ -1,111 +1,111 @@
 let myPizzas = [
     {
         name: "Margherita",
-        description: "Classic pizza with tomato sauce, mozzarella cheese, and fresh basil.",
+        description: "Klassische Pizza mit Tomatensauce, Mozzarella-Käse und frischem Basilikum.",
         price: 8.99
     },
     {
-        name: "Pepperoni",
-        description: "Spicy pepperoni slices with mozzarella cheese and tomato sauce.",
+        name: "Peperoni",
+        description: "Pikante Peperonischeiben mit Mozzarellakäse und Tomatensauce.",
         price: 9.99
     },
     {
-        name: "BBQ Chicken",
-        description: "Grilled chicken, BBQ sauce, red onions, and cilantro.",
+        name: "BBQ Hähnchen",
+        description: "Gegrilltes Hähnchen, BBQ-Sauce, rote Zwiebeln und Koriander.",
         price: 10.99
     },
     {
         name: "Veggie",
-        description: "Bell peppers, onions, mushrooms, olives, and spinach.",
+        description: "Paprika, Zwiebeln, Champignons, Oliven und Spinat.",
         price: 9.49
     },
     {
-        name: "Hawaiian",
-        description: "Ham, pineapple, and mozzarella cheese.",
+        name: "Pizza Hawaii",
+        description: "Schinken, Ananas und Mozzarella-Käse.",
         price: 10.49
     }
 ]
 
-let mySalats = [
+let mySalads = [
     {
-        name: "Caesar Salad",
-        description: "Romaine lettuce, croutons, parmesan cheese, and Caesar dressing.",
+        name: "Caesar-Salat",
+        description: "Römischer Salat, Croutons, Parmesankäse und Caesar-Dressing.",
         price: 7.99
     },
     {
-        name: "Greek Salad",
-        description: "Tomatoes, cucumbers, olives, feta cheese, and olive oil.",
+        name: "Griechischer Salat",
+        description: "Tomaten, Gurken, Oliven, Feta-Käse und Olivenöl.",
         price: 8.49
     },
     {
-        name: "Caprese Salad",
-        description: "Fresh mozzarella, tomatoes, basil, and balsamic glaze.",
+        name: "Caprese-Salat",
+        description: "Frischer Mozzarella, Tomaten, Basilikum und Balsamico-Glasur.",
         price: 8.99
     },
     {
-        name: "Garden Salad",
-        description: "Mixed greens, cherry tomatoes, cucumbers, and vinaigrette.",
+        name: "Garten-Salat",
+        description: "Gemischter Salat, Kirschtomaten, Gurken und Vinaigrette.",
         price: 6.99
     },
     {
-        name: "Spinach Salad",
-        description: "Spinach, strawberries, walnuts, and poppy seed dressing.",
+        name: "Spinat-Salat",
+        description: "Spinat, Erdbeeren, Walnüsse und Mohndressing.",
         price: 7.49
     }
 ]
 
 let mySnacks = [
     {
-        name: "Garlic Bread",
-        description: "Toasted bread with garlic butter and herbs.",
+        name: "Knoblauchbrot",
+        description: "Geröstetes Brot mit Knoblauchbutter und Kräutern.",
         price: 4.99
     },
     {
         name: "Buffalo Wings",
-        description: "Spicy chicken wings served with blue cheese dressing.",
+        description: "Pikante Hähnchenflügel mit Blauschimmelkäse-Dressing.",
         price: 9.49
     },
     {
         name: "Mozzarella Sticks",
-        description: "Fried mozzarella cheese served with marinara sauce.",
+        description: "Gebratener Mozzarella-Käse, serviert mit Marinara-Sauce.",
         price: 6.99
     },
     {
         name: "Bruschetta",
-        description: "Grilled bread topped with tomatoes, basil, and balsamic glaze.",
+        description: "Gegrilltes Brot, belegt mit Tomaten, Basilikum und Balsamico-Glasur.",
         price: 5.99
     },
     {
         name: "Nachos",
-        description: "Tortilla chips topped with cheese, jalapeños, and salsa.",
+        description: "Tortilla-Chips, belegt mit Käse, Jalapeños und Salsa.",
         price: 7.49
     }
 ]
 
 let myDrinks = [
     {
-        name: "Coke",
-        description: "Classic cola beverage.",
+        name: "Cola",
+        description: "Klassisches Cola-Getränk.",
         price: 1.99
     },
     {
         name: "Sprite",
-        description: "Lemon-lime flavored soda.",
+        description: "Soda mit Zitronen-Limetten-Geschmack.",
         price: 1.99
     },
     {
-        name: "Iced Tea",
-        description: "Refreshing iced tea with lemon.",
+        name: "Eistee",
+        description: "Erfrischender Eistee mit Zitrone.",
         price: 2.49
     },
     {
-        name: "Lemonade",
-        description: "Freshly squeezed lemonade.",
+        name: "Limonade",
+        description: "Frisch gepresste Limonade.",
         price: 2.99
     },
     {
-        name: "Water",
-        description: "Bottled water.",
+        name: "Wasser",
+        description: "Wasser aus der Flasche.",
         price: 1.49
     }
 ]
