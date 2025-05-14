@@ -66,7 +66,7 @@ function displayBasket() {
   basketSection.innerHTML = "";
 
   if (basketContent.length === 0) {
-    basketSection.innerHTML = "<p>Ihr Warenkorb ist leer.</p>";
+    basketSection.innerHTML = "<p class='self-center'>Ihr Warenkorb ist leer.</p>";
     return;
   }
 
@@ -75,13 +75,9 @@ function displayBasket() {
     let itemDiv = document.createElement("div");
     itemDiv.className = "basket-item";
 
-    itemDiv.innerHTML = `<div><h3>${
-      item.name
-    }</h3><p id="price-tag">Einzelreis: ${item.price.toFixed(
-      2
-    )} €</p><p id="price-tag">Gesamt: ${(item.price * item.quantity).toFixed(
-      2
-    )} €</p>
+    itemDiv.innerHTML = `<div><h3>${item.name}</h3>
+    <p id="price-tag">Einzelreis: ${item.price.toFixed(2)} €</p>
+    <p id="price-tag">Gesamt: ${(item.price * item.quantity).toFixed(2)} €</p>
     <div class="quantity-controls">
           <button onclick='decreaseQuantity(${i})'>−</button>
           <span>${item.quantity}</span>

@@ -4,6 +4,8 @@
   scroll-behavior: smooth;
   padding: 0;
   font-family: "Roboto", sans-serif;
+  scrollbar-width: thin;
+  scrollbar-color: #ff8000 #f1f1f1;
 }
 
 a {
@@ -14,11 +16,7 @@ p {
     font-size: 16px;
 }
 
-::-webkit-scrollbar {
-  width: 10px;
-  background-color: #f1f1f1;
-}
-::-webkit-scrollbar-thumb {
-  background-color: #ff8000;
-  border-radius: 5px;
+.self-center {
+  align-self: center;
+  text-align: center;
 }

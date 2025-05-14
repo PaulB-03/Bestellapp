@@ -33,13 +33,10 @@ function loadSaladSection() {
     let salad = mySalads[i];
     let saladDiv = document.createElement("div");
     saladDiv.className = "menu-item";
-    saladDiv.innerHTML = `<div class="left-side"><h3>${salad.name}</h3><p>${
-      salad.description
-    }</p><p id="price-tag">Preis: ${salad.price.toFixed(
-      2
-    )} €</p></div><div class="right-side"><button onclick='addToBasket(${JSON.stringify(
-      salad
-    )})'>Zum Warenkorb hinzufügen</button></div>`;
+    saladDiv.innerHTML = `<div class="left-side"><h3>${salad.name}</h3>
+    <p>${salad.description}</p>
+    <p id="price-tag">Preis: ${salad.price.toFixed(2)} €</p></div>
+    <div class="right-side"><button onclick='addToBasket(${JSON.stringify(salad)})'>Zum Warenkorb hinzufügen</button></div>`;
     saladSection.appendChild(saladDiv);
   }
 }
@@ -52,13 +49,10 @@ function loadSnackSection() {
     let snack = mySnacks[i];
     let snackDiv = document.createElement("div");
     snackDiv.className = "menu-item";
-    snackDiv.innerHTML = `<div class="left-side"><h3>${snack.name}</h3><p>${
-      snack.description
-    }</p><p id="price-tag">Preis: ${snack.price.toFixed(
-      2
-    )} €</p></div><div class="right-side"><button onclick='addToBasket(${JSON.stringify(
-      snack
-    )})'>Zum Warenkorb hinzufügen</button></div>`;
+    snackDiv.innerHTML = `<div class="left-side"><h3>${snack.name}</h3>
+    <p>${snack.description}</p>
+    <p id="price-tag">Preis: ${snack.price.toFixed(2)} €</p></div>
+    <div class="right-side"><button onclick='addToBasket(${JSON.stringify(snack)})'>Zum Warenkorb hinzufügen</button></div>`;
     snackSection.appendChild(snackDiv);
   }
 }
@@ -71,13 +65,10 @@ function loadDrinkSection() {
     let drink = myDrinks[i];
     let drinkDiv = document.createElement("div");
     drinkDiv.className = "menu-item";
-    drinkDiv.innerHTML = `<div class="left-side"><h3>${drink.name}</h3><p>${
-      drink.description
-    }</p><p id="price-tag">Preis: ${drink.price.toFixed(
-      2
-    )} €</p></div><div class="right-side"><button onclick='addToBasket(${JSON.stringify(
-      drink
-    )})'>Zum Warenkorb hinzufügen</button></div>`;
+    drinkDiv.innerHTML = `<div class="left-side"><h3>${drink.name}</h3>
+    <p>${drink.description}</p>
+    <p id="price-tag">Preis: ${drink.price.toFixed(2)} €</p></div>
+    <div class="right-side"><button onclick='addToBasket(${JSON.stringify(drink)})'>Zum Warenkorb hinzufügen</button></div>`;
     drinkSection.appendChild(drinkDiv);
   }
 }
