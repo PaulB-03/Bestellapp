@@ -66,7 +66,8 @@ function displayBasket() {
   basketSection.innerHTML = "";
 
   if (basketContent.length === 0) {
-    basketSection.innerHTML = "<p class='self-center'>Ihr Warenkorb ist leer.</p>";
+    basketSection.innerHTML =
+      "<p class='self-center'>Ihr Warenkorb ist leer.</p>";
     return;
   }
 
@@ -130,4 +131,59 @@ function initDeliveryCheckbox() {
     calculateTotalPrice();
     displayTotalPrice();
   });
+}
+
+function clearBasket() {
+  basketContent = [];
+  localStorage.removeItem("basketContent");
+  localStorage.removeItem("deliverySelected");
+  calculateTotalPrice();
+  displayBasket();
+  displayTotalPrice();
+}
+
+function order() {
+  if (basketContent.length === 0) {
+    // Display an order confirmation message or error if the basket is empty but dont use alert
+    const basketSection = document.getElementById("basket-content");
+    basketSection.innerHTML =
+      "<p class='self-center'>Ihr Warenkorb ist leer. Bitte fügen Sie Artikel hinzu, bevor Sie bestellen.</p>";
+    basketSection.classList.add("error-message");
+    setTimeout(() => {
+      basketSection.classList.remove("error-message");
+      basketSection.innerHTML =
+        "<p class='self-center'>Ihr Warenkorb ist leer.</p>";
+    }, 3000);
+
+    return;
+  }
+  const orderDetails = {
+    items: basketContent,
+    totalPrice: totalPriceWithDelivery,
+    deliverySelected: localStorage.getItem("deliverySelected") === "true",
+  };
+  const orderSection = document.getElementById("order-confirmation");
+  orderSection.style.display = "block";
+  orderSection.innerHTML = `
+    <h2>Bestellbestätigung</h2>
+    <p>Vielen Dank für Ihre Bestellung!</p>
+    <p>Gesamtpreis: ${orderDetails.totalPrice.toFixed(2)} €</p>
+    <p>Lieferoption: ${
+      orderDetails.deliverySelected ? "Lieferung" : "Abholung"
+    }</p>
+    <h3>Bestellte Artikel:</h3>
+    <ul>${orderDetails.items
+      .map(
+        (item) =>
+          `<li>${item.name} - ${item.quantity} Stück - ${(
+            item.price * item.quantity
+          ).toFixed(2)} €</li>`
+      )
+      .join("")}</ul>`;
+  orderSection.classList.add("order-confirmation");
+  setTimeout(() => {
+    orderSection.classList.remove("order-confirmation");
+    orderSection.innerHTML = "";
+  }, 5000);
+  clearBasket();
 }

@@ -18,3 +18,24 @@
     color: #ff8000;
     font-weight: bold;
 }
+
+#order-confirmation {
+    display: none;
+    padding: 10px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.order-confirmation {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    padding: 20px;
+    border-radius: 5px;
+}
