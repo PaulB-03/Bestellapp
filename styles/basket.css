@@ -131,3 +131,20 @@
   transform: scale(1.05);
   transition: transform 0.2s ease-in-out;
 }
+
+/* .basket-top and .basket-bottom should always be visible no matter how far i scroll down, both should still be inside the basket container  */
+
+.basket-top {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  z-index: 1;
+}
+
+.basket-bottom {
+  position: sticky;
+  bottom: 0;
+  background-color: white;
+  z-index: 1;
+  margin-bottom: 35px;
+}

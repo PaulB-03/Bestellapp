@@ -39,28 +39,28 @@
             <div class="menu-items">
               <div id="pizzas">
                 <div class="section-head">
-                  <img src="./assets/img/pizzas.jpg" alt="">
+                  <img src="./assets/img/pizzas.jpg" alt="" />
                   <h2>Pizza:</h2>
                 </div>
                 <div id="pizza-section"></div>
               </div>
               <div id="salads">
                 <div class="section-head">
-                  <img src="./assets/img/salads.jpg" alt="">
+                  <img src="./assets/img/salads.jpg" alt="" />
                   <h2>Salat:</h2>
                 </div>
                 <div id="salad-section"></div>
               </div>
               <div id="snacks">
                 <div class="section-head">
-                  <img src="./assets/img/snacks.jpg" alt="">
+                  <img src="./assets/img/snacks.jpg" alt="" />
                   <h2>Snacks:</h2>
                 </div>
                 <div id="snack-section"></div>
               </div>
               <div id="drinks">
                 <div class="section-head">
-                  <img src="./assets/img/drinks.jpg" alt="">
+                  <img src="./assets/img/drinks.jpg" alt="" />
                   <h2>Getränke:</h2>
                 </div>
                 <div id="drink-section"></div>
@@ -69,22 +69,45 @@
           </div>
         </div>
         <div class="basket">
-          <h2>Warenkorb</h2>
+          <div class="basket-top">
+            <h2>Warenkorb</h2>
+          </div>
           <div class="devider"></div>
           <div id="basket-content"></div>
           <div class="devider"></div>
-          <div class="checkDelivery">
-            <input type="checkbox" id="delivery" name="delivery" value="delivery" />
-            <label for="delivery">Abholung</label>
-          </div>
-          <div class="basket-total" id="basket-total"></div>
-          <div class="basket-buttons">
-            <button class="basket-button" id="clear-basket" onclick="clearBasket()">Warenkorb leeren</button>
-            <button class="basket-button" id="order-button" onclick="order()">Bestellen</button>
+          <div class="basket-bottom">
+            <div class="checkDelivery">
+              <input
+                type="checkbox"
+                id="delivery"
+                name="delivery"
+                value="delivery"
+              />
+              <label for="delivery">Abholung</label>
+            </div>
+            <div class="basket-total" id="basket-total"></div>
+            <div class="basket-buttons">
+              <button
+                class="basket-button"
+                id="clear-basket"
+                onclick="clearBasket()"
+              >
+                Warenkorb leeren
+              </button>
+              <button class="basket-button" id="order-button" onclick="order()">
+                Bestellen
+              </button>
+            </div>
           </div>
         </div>
       </div>
       <div id="order-confirmation"></div>
+      <div class="footer">
+        <div class="footer-content">
+          <p>© 2025 Pizza Pallace. Alle Rechte vorbehalten.</p>
+          <p>Impressum | Datenschutz | AGB</p>
+        </div>
+      </div>
     </div>
   </body>
 </html>
