@@ -72,3 +72,21 @@ function loadDrinkSection() {
     drinkSection.appendChild(drinkDiv);
   }
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const btn    = document.getElementById('basket-toggle');
+  const basket = document.querySelector('.basket');
+
+  btn.addEventListener('click', () => {
+    basket.classList.toggle('open');
+  });
+
+  document.addEventListener('click', (e) => {
+    if (basket.classList.contains('open')
+        && !basket.contains(e.target)
+        && e.target !== btn) {
+      basket.classList.remove('open');
+    }
+  });
+});
+
