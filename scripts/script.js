@@ -31,7 +31,17 @@ function createMenuItemHTML(item) {
   `;
 }
 
-
+function setupOutsideClickClose(btn, basket) {
+  document.addEventListener("click", e => {
+    if (
+      basket.classList.contains("open") &&
+      !basket.contains(e.target) &&
+      e.target !== btn
+    ) {
+      basket.classList.remove("open");
+    }
+  });
+}
 
 document.addEventListener("DOMContentLoaded", () => {
   init();
@@ -43,13 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
     basket.classList.toggle("open");
   });
 
-  document.addEventListener("click", e => {
-    if (
-      basket.classList.contains("open") &&
-      !basket.contains(e.target) &&
-      e.target !== btn
-    ) {
-      basket.classList.remove("open");
-    }
-  });
+  setupOutsideClickClose(btn, basket);
 });
+

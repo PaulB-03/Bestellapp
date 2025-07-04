@@ -35,7 +35,6 @@
   }
 
   .basket-mobile-total {
-    display: block !important;
     position: fixed;
     top: 3.5rem; 
     right: 1rem; 
