@@ -8,6 +8,7 @@ function initBasket() {
   getFromLocalStorage();
   loadFunctions();
   initDeliveryCheckbox();
+  displayMobileTotal();
 }
 
 
@@ -92,6 +93,12 @@ function displayTotalPrice() {
   totalDiv.innerHTML = createTotalPriceHTML();
 }
 
+function displayMobileTotal() {
+  const el = document.getElementById("basket-mobile-total");
+  if (!el) return;
+  el.textContent = totalPriceWithDelivery.toFixed(2) + " €";
+}
+
 
 function createTotalPriceHTML() {
   const deliverySelected = localStorage.getItem("deliverySelected") === "true";
@@ -132,6 +139,7 @@ function initDeliveryCheckbox() {
     localStorage.setItem("deliverySelected", deliveryCheckbox.checked);
     calculateTotalPrice();
     displayTotalPrice();
+    displayMobileTotal();
   });
 }
 
