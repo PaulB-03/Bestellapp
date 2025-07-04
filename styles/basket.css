@@ -1,9 +1,13 @@
 .basket {
+  position: sticky;
   width: 20vw;
   height: 100%;
   color: black;
   display: flex;
   flex-direction: column;
+  top: 1rem;
+  align-self: flex-start;
+  z-index: 10;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
 }
 
@@ -132,19 +136,15 @@
   transition: transform 0.2s ease-in-out;
 }
 
-/* .basket-top and .basket-bottom should always be visible no matter how far i scroll down, both should still be inside the basket container  */
-
-.basket-top {
-  position: sticky;
-  top: 0;
-  background-color: white;
-  z-index: 1;
-}
-
 .basket-bottom {
   position: sticky;
   bottom: 0;
   background-color: white;
   z-index: 1;
   margin-bottom: 35px;
+}
+
+.main-section {
+  display: flex;
+  align-items: flex-start;
 }
