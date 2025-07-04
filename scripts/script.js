@@ -32,24 +32,23 @@ function createMenuItemHTML(item) {
 }
 
 function setupOutsideClickClose(btn, basket) {
+  basket.addEventListener("click", e => {
+    e.stopPropagation();
+  });
   document.addEventListener("click", e => {
-    if (
-      basket.classList.contains("open") &&
-      !basket.contains(e.target) &&
-      e.target !== btn
-    ) {
+    if (basket.classList.contains("open") && e.target !== btn) {
       basket.classList.remove("open");
     }
   });
 }
-
 document.addEventListener("DOMContentLoaded", () => {
   init();
 
   const btn = document.getElementById("basket-toggle");
   const basket = document.querySelector(".basket");
 
-  btn.addEventListener("click", () => {
+  btn.addEventListener("click", e => {
+    e.stopPropagation();
     basket.classList.toggle("open");
   });
 
