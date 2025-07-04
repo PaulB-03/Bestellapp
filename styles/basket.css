@@ -9,7 +9,7 @@
   align-self: flex-start;
   z-index: 10;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  max-height: 85vh;
+  max-height: 89vh;
   overflow-y: auto;
 }
 
@@ -143,7 +143,6 @@
   bottom: 0;
   background-color: white;
   z-index: 1;
-  margin-bottom: 35px;
 }
 
 .main-section {

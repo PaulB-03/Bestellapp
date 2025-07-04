@@ -5,9 +5,7 @@ let totalPriceWithDelivery = 0.0;
 
 function initBasket() {
   getFromLocalStorage();
-  calculateTotalPrice();
-  displayBasket();
-  displayTotalPrice();
+  loadFunctions();
   initDeliveryCheckbox();
 }
 
@@ -48,17 +46,13 @@ function addToBasket(item) {
     basketContent.push(item);
   }
   saveToLocalStorage();
-  calculateTotalPrice();
-  displayBasket();
-  displayTotalPrice();
+  loadFunctions();
 }
 
 function removeFromBasket(index) {
   basketContent.splice(index, 1);
   saveToLocalStorage();
-  calculateTotalPrice();
-  displayBasket();
-  displayTotalPrice();
+  loadFunctions();
 }
 
 function displayBasket() {
@@ -105,9 +99,7 @@ function displayTotalPrice() {
 function increaseQuantity(index) {
   basketContent[index].quantity += 1;
   saveToLocalStorage();
-  calculateTotalPrice();
-  displayBasket();
-  displayTotalPrice();
+  loadFunctions();
 }
 
 function decreaseQuantity(index) {
@@ -116,9 +108,7 @@ function decreaseQuantity(index) {
     basketContent.splice(index, 1);
   }
   saveToLocalStorage();
-  calculateTotalPrice();
-  displayBasket();
-  displayTotalPrice();
+  loadFunctions();
 }
 
 function initDeliveryCheckbox() {
@@ -137,14 +127,11 @@ function clearBasket() {
   basketContent = [];
   localStorage.removeItem("basketContent");
   localStorage.removeItem("deliverySelected");
-  calculateTotalPrice();
-  displayBasket();
-  displayTotalPrice();
+  loadFunctions();
 }
 
 function order() {
   if (basketContent.length === 0) {
-    // Display an order confirmation message or error if the basket is empty but dont use alert
     const basketSection = document.getElementById("basket-content");
     basketSection.innerHTML =
       "<p class='self-center'>Ihr Warenkorb ist leer. Bitte fügen Sie Artikel hinzu, bevor Sie bestellen.</p>";
@@ -186,4 +173,10 @@ function order() {
     orderSection.innerHTML = "";
   }, 5000);
   clearBasket();
+}
+
+function loadFunctions() {
+  calculateTotalPrice();
+  displayBasket();
+  displayTotalPrice();
 }

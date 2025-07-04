@@ -3,6 +3,9 @@
     color: white;
     padding: 10px;
     height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .header img {
@@ -55,4 +58,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+}
+
+.basket-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.basket-count {
+    background-color: #ffffff;
 }
