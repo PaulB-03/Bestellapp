@@ -1,0 +1,32 @@
+@media (max-width: 1155px) {
+  .menu-item button {
+    width: 220px;
+    height: 39px;
+    font-size: 14px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+    .section-head img {
+        height: 150px;
+    }
+
+    .menu img {
+        height: 200px;
+    }
+}
+
+@media (max-width: 950px) {
+    .menu img {
+        height: 150px;
+    }
+}
+
+@media (max-width: 850px) {
+    .menu-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
